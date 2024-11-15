@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Commandes Linux, Python, HTML & Git</title>
+    <style>
+      body {
+        display: flex;
+        font-family: Arial, sans-serif;
+      }
+      .toggle-button {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+        border-radius: 5px;
+      }
+      .toggle-content {
+        display: none; /* Masqué par défaut */
+        margin-top: 15px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+      }
+      .code-block {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+        margin-bottom: 10px;
+        font-family: monospace;
+        white-space: pre;
+        font-size: 0.9em;
+      }
+      /* Sidebar */
+      .sidebar {
+        height: 100vh;
+        width: 250px;
+        background-color: #f4f4f4;
+        padding: 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow-y: auto;
+      }
+
+      .sidebar h2 {
+        font-size: 18px;
+      }
+
+      .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .sidebar ul li {
+        margin: 10px 0;
+      }
+
+      .sidebar ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+      }
+
+      /* Main content */
+      .content {
+        margin-left: 270px;
+        padding: 20px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin-bottom: 10px;
+      }
+    </style>
+    <script>
+      function toggleContent() {
+        var content = document.getElementById("toggle-content");
+        if (content.style.display === "none" || content.style.display === "") {
+          content.style.display = "block";
+        } else {
+          content.style.display = "none";
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>Navigation</h2>
+      <ul>
+        <li><a href="#linux-section">Linux</a></li>
+
+        <li><a href="#python-section">Python</a></li>
+        <li><a href="#html-section">HTML</a></li>
+        <li><a href="#git-section">Git</a></li>
+        <li><a href="#java-section">java</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+      <h1>Commandes Linux, Exemples de Code Python, HTML & Git</h1>
+
+      <!-- Section 1: Commandes Linux Essentielles -->
+      <h2 id="linux-section">[ Commandes Linux Essentielles ]</h2>
+
+      <h3>[ Navigation ]</h3>
+      <ul>
+        <li><code>man</code> : manuel</li>
+      </ul>
+      <ul>
+        <h3>navigation</h3>
+        <li>
+          <code>pwd</code> : affiche le répértoire de l'emplacement actuel
+        </li>
+        <li><code>mkdir ""</code> : créer un dossier</li>
+        <li><code>cd ""</code> : ce déplace dans le dossier ""</li>
+        <li><code>cd ..</code> ce déplace dans le dossier parent</li>
+      </ul>
+      <ul>
+        <h3>création</h3>
+        <li>
+          <code>pwd</code> : affiche le répértoire de l'emplacement actuel
+        </li>
+        <li><code>mkdir ""</code> : créer un dossier</li>
+        <li><code>cat</code> : afficher contenu fichier</li>
+      </ul>
+      <ul>
+        <h3>copier, déplacer</h3>
+        <li>
+          <code
+            >cp "nom du fichier à copier" "nom du fichier qui sera créer"</code
+          >
+          : copie un fichier, et créer un nouveau fichier avec le contenu du
+          précédent
+        </li>
+        <li>
+          <code
+            >cp "nom du fichier à copier" "répértoire/nom du fichier qui sera
+            créer"</code
+          >
+          : créer un dossier
+        </li>
+      </ul>
+
+      <ul>
+        <h3>supprimer</h3>
+        <li>
+          <code>rm "nom du fichier"</code>
+          :supprime le fichier ""
+        </li>
+        <li>
+          <code>rmdir</code>
+          : supprime un dossier
+        </li>
+        <li>
+          <code>rm -r "nom du dossier"</code>
+          : supprime un dossier et son contenu
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <h3>rwx</h3>
+          <p>faire ls - l</p>
+          <p>si élément commence par d : c'est un dossier</p>
+          <p>si élément commence par - : c'est un fichier</p>
+          <p>r = Read</p>
+          <p>w = Wright</p>
+          <p>x = Executer</p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <code>rm "nom du fichier"</code>
+          :supprime le fichier ""
+        </li>
+        <li>
+          <code>rmdir</code>
+          : supprime un dossier
+        </li>
+        <li>
+          <code>rm -r "nom du dossier"</code>
+          : supprime un dossier et son contenu
+        </li>
+      </ul>
+
+      <li>
+        <code>ls</code> : Liste les fichiers et répertoires.
+        <ul>
+          <li><code>ls -l</code> : Liste détaillée.</li>
+          <li><code>ls -a</code> : Inclut les fichiers cachés.</li>
+        </ul>
+      </li>
+      <li>
+        <code>cd</code> : Change de répertoire.
+        <ul>
+          <li><code>cd ..</code> : Remonte d'un niveau.</li>
+          <li><code>cd ~</code> : Accède au répertoire personnel.</li>
+        </ul>
+      </li>
+      ##
+      <li>
+        <code>cd</code> : Change de répertoire.
+        <ul>
+          <li><code>cd ..</code> : Remonte d'un niveau.</li>
+          <li><code>cd ~</code> : Accède au répertoire personnel.</li>
+        </ul>
+      </li>
+
+      <h3>[ Gestion de Fichiers ]</h3>
+      <ul>
+        <li><code>cat fichier.txt</code> : Affiche le contenu d'un fichier.</li>
+        <li><code>file fichier.txt</code> : Identifie le type de fichier.</li>
+      </ul>
+
+      <h3>[ Analyse de l'Espace Disque ]</h3>
+      <ul>
+        <li>
+          <code>du -h</code> : Affiche l'utilisation du disque de manière
+          lisible.
+        </li>
+        <li>
+          <code>du -sh /chemin</code> : Résume l'utilisation de l'espace disque.
+        </li>
+      </ul>
+
+      <h3>[ Recherche de Fichiers ]</h3>
+      <ul>
+        <li>
+          <code>find /chemin -name "nom_fichier"</code> : Recherche un fichier
+          spécifique.
+        </li>
+        <li>
+          <code>grep "motif" fichier.txt</code> : Recherche un motif dans un
+          fichier.
+        </li>
+      </ul>
+
+      <h3>[ Connexion SSH ]</h3>
+      <ul>
+        <li>
+          <code>ssh utilisateur@hôte</code> : Se connecte à une machine
+          distante.
+        </li>
+        <li>
+          <code>scp fichier utilisateur@hôte:/chemin</code> : Copie un fichier
+          via SSH.
+        </li>
+      </ul>
+
+      <!-- Section 2: Exemples de Code Python -->
+      <h2 id="python-section">[ Exemples de Code Python ]</h2>
+
+      <h3>[ Manipulation de Chaînes ]</h3>
+      <p id="string-task">Voir la console pour la manipulation des chaînes.</p>
+
+      <ul>
+        <li>
+          <h2>1. Création d'une liste :</h2>
+          <p>ma_liste = [1, 2, 3, 4, 5]</p>
+        </li>
+        <li>
+          <h2>2. Lecture (Accès à un élément) :</h2>
+          <p>print(ma_liste[0]) # Affiche 1</p>
+        </li>
+        <li>
+          <h2>3. Lecture avec les tranches (Slicing) :</h2>
+          <p>sous_liste = ma_liste[1:4] # Affiche [2, 3, 4]</p>
+          <p>ma_liste[-1] : Le dernier élément</p>
+        </li>
+      </ul>
+      <h4>4. Boucle à travers une liste :</h4>
+      <ul>
+        <li>
+          <h4>Pour parcourir tous les éléments d'une liste.</h4>
+          <p>for element in ma_liste: print(element)</p>
+        </li>
+        <li>
+          <h4>Pour vérifier si un élément est présent dans la liste.</h4>
+          <p>if 3 in ma_liste: print("L'élément est dans la liste")</p>
+        </li>
+        <li>
+          <h4>Pour obtenir le nombre d'éléments dans la liste.</h4>
+          <p>print(len(ma_liste)) # Affiche 5</p>
+        </li>
+        <li>
+          <h4>8. Compter les occurrences d’un élément (count) :</h4>
+          <p>print(ma_liste.count(3)) # Affiche 1</p>
+        </li>
+        <li>
+          <h4>Pour obtenir le nombre d'éléments dans la liste.</h4>
+          <p>print(len(ma_liste)) # Affiche 5</p>
+        </li>
+      </ul>
+
+      <h3>[ Remplacement et Conversion ]</h3>
+      <p>Remplacement 'tu' par 'ta': <span id="replace-task"></span></p>
+      <p>Chaine en minuscule: <span id="lower-task"></span></p>
+
+      <h3>[ Opérations sur les Listes ]</h3>
+      <p>Voir la console pour les opérations sur les listes.</p>
+
+      <h3>[ Dictionnaire d'Étudiant ]</h3>
+      <p>Étudiant : <span id="student-task"></span></p>
+      <p>Note: <span id="grade-task"></span></p>
+
+      <h3>[ Vérification d'Ambassadeur ]</h3>
+      <label for="nameInput">Entrez votre nom : </label>
+      <input type="text" id="nameInput" />
+      <button onclick="checkAmbassador()">Vérifier</button>
+      <p id="ambassador-result"></p>
+
+      <!-- Section 3: HTML -->
+      <h2 id="html-section">[ HTML ]</h2>
+      <p>Voici quelques éléments HTML et leurs usages dans ce document.</p>
+
+      <!-- Section 4: Commandes Git Essentielles -->
+      <h2 id="git-section">[ Commandes Git Essentielles ]</h2>
+      <h3>[ Initialisation ]</h3>
+      <ul>
+        <p>tuto</p>
+        <p>
+          quand nous créons un dossier, git add . pour ajouter un fichier dans
+          notre push
+        </p>
+        <p>
+          git commit dira à git que ce fichier à été modifier avec un COMMIT
+        </p>
+        <citation> 1 file changed, 3 insertions(+) </citation>
+        <p>: la réponse du terminal</p>
+        <p>le commit enregistre les modifications en local</p>
+
+        <p>pour envvoyer les modification, nous faisons git push</p>
+
+        <li><code>git init</code> : Initialise un dépôt Git local.</li>
+      </ul>
+      <h3>[ Gestion des modifications ]</h3>
+      <ul>
+        <li><code>git add .</code> : Ajoute tous les fichiers à l'index.</li>
+        <li>
+          <code>git commit -m "message"</code> : Fait un commit avec un message.
+        </li>
+      </ul>
+      <h3>[ Pousser les modifications ]</h3>
+      <ul>
+        <li>
+          <code>git push origin master</code> : Envoie les modifications vers le
+          dépôt distant.
+        </li>
+      </ul>
+      <h3>[ Vérifier l'état ]</h3>
+      <ul>
+        <li>
+          <code>git status</code> : Vérifie les modifications dans le dépôt.
+        </li>
+      </ul>
+      <h3>[ Récupérer les modifications ]</h3>
+      <ul>
+        <li>
+          <code>git pull</code> : Récupère et fusionne les modifications du
+          dépôt distant.
+        </li>
+      </ul>
+      <h3>[ se positionner sur une branche ]</h3>
+      <ul>
+        <li><code>git chechout</code> :</li>
+      </ul>
+      <h3>[ merge = fusionner ]</h3>
+      <ul>
+        <li>
+          <code>git merge</code> : Récupère et fusionne les modifications du
+          dépôt distant.
+        </li>
+      </ul>
+      <h3>[ rebase = transferer ]</h3>
+      <ul>
+        <li><code>git rebase</code> : rassembler des branche en une seule</li>
+      </ul>
+
+      <div class="container">
+        <h2 id="java-section">Programmation Orientée Objet (POO) - Résumé</h2>
+
+        <h2>Introduction</h2>
+        <p>
+          La Programmation Orientée Objet (POO) est un paradigme de
+          programmation basé sur l'organisation du code en objets. Chaque objet
+          est une instance d'une <strong>classe</strong>, qui est un modèle
+          définissant les attributs (données) et les comportements (méthodes)
+          associés à cet objet.
+        </p>
+
+        <h2>Principes de Base</h2>
+
+        <h3>1. Classe et Objet</h3>
+        <p>
+          Une <strong>classe</strong> est un modèle pour créer des objets. Elle
+          définit les attributs et méthodes que les objets créés à partir de
+          cette classe posséderont.
+        </p>
+        <p>
+          Un <strong>objet</strong> est une instance d'une classe. Il possède
+          ses propres valeurs pour les attributs définis par sa classe.
+        </p>
+        <p><strong>Exemple :</strong></p>
+        <code>
+          class Voiture {<br />
+          &nbsp;&nbsp;String couleur;<br />
+          &nbsp;&nbsp;void conduire() { ... }<br />
+          }<br />
+          Voiture maVoiture = new Voiture();
+        </code>
+
+        <h3>2. Encapsulation</h3>
+        <p>
+          <strong>L'encapsulation</strong> consiste à restreindre l'accès direct
+          aux attributs d'une classe et à fournir des méthodes pour les
+          manipuler. Elle permet de protéger les données en les rendant
+          accessibles uniquement via des méthodes spécifiques (getters et
+          setters).
+        </p>
+        <p><strong>Exemple :</strong></p>
+        <code>
+          class Personne {<br />
+          &nbsp;&nbsp;private String nom;<br />
+          &nbsp;&nbsp;public String getNom() { return nom; }<br />
+          &nbsp;&nbsp;public void setNom(String nom) { this.nom = nom; }<br />
+          }
+        </code>
+
+        <h3>3. Héritage</h3>
+        <p>
+          <strong>L'héritage</strong> est le mécanisme par lequel une classe
+          peut hériter des attributs et des méthodes d'une autre classe. Cela
+          permet de créer des relations de type "est un" et de réutiliser le
+          code.
+        </p>
+        <p><strong>Exemple :</strong></p>
+        <code>
+          class Animal {<br />
+          &nbsp;&nbsp;void manger() { ... }<br />
+          }<br />
+          class Chien extends Animal {<br />
+          &nbsp;&nbsp;void aboyer() { ... }<br />
+          }
+        </code>
+
+        <h3>4. Polymorphisme</h3>
+        <p>
+          <strong>Le polymorphisme</strong> permet d'utiliser une méthode de
+          manière différente selon les objets. Il existe deux types de
+          polymorphisme : <em>polymorphisme de compilation</em> (surcharge de
+          méthodes) et <em>polymorphisme d'exécution</em> (sous-typage).
+        </p>
+        <p><strong>Exemple :</strong></p>
+        <code>
+          class Animal {<br />
+          &nbsp;&nbsp;void faireDuBruit() { System.out.println("Bruitage"); }<br />
+          }<br />
+          class Chien extends Animal {<br />
+          &nbsp;&nbsp;void faireDuBruit() { System.out.println("Aboie"); }<br />
+          }
+        </code>
+
+        <h3>5. Abstraction</h3>
+        <p>
+          <strong>L'abstraction</strong> permet de définir des classes et des
+          méthodes abstraites pour ne garder que les éléments essentiels et
+          masquer les détails d'implémentation. Les classes abstraites ne
+          peuvent pas être instanciées directement et sont destinées à être
+          étendues par d'autres classes.
+        </p>
+        <p><strong>Exemple :</strong></p>
+        <code>
+          abstract class Forme {<br />
+          &nbsp;&nbsp;abstract double aire();<br />
+          }<br />
+          class Cercle extends Forme {<br />
+          &nbsp;&nbsp;double aire() { return Math.PI * rayon * rayon; }<br />
+          }
+        </code>
+
+        <h2>Avantages de la POO</h2>
+        <ul>
+          <li>
+            <strong>Réutilisabilité du code</strong> : Grâce à l'héritage et aux
+            classes réutilisables.
+          </li>
+          <li>
+            <strong>Modularité</strong> : Les objets sont indépendants,
+            facilitant la maintenance et la lisibilité.
+          </li>
+          <li>
+            <strong>Encapsulation</strong> : Protection des données et réduction
+            des erreurs.
+          </li>
+          <li>
+            <strong>Facilité de débogage</strong> : Structure plus claire et
+            organisée.
+          </li>
+        </ul>
+
+        <h2>Résumé</h2>
+        <p>
+          La Programmation Orientée Objet est un paradigme puissant qui organise
+          le code en objets, facilitant la réutilisation, la maintenance et la
+          modularité. Les quatre concepts clés (encapsulation, héritage,
+          polymorphisme, abstraction) permettent de construire des applications
+          évolutives et maintenables.
+        </p>
+
+        <p>exemple</p>
+        <button class="toggle-button" onclick="toggleContent()">
+          Afficher/Masquer le Contenu
+        </button>
+
+        <div id="toggle-content" class="toggle-content">
+          <p>
+            Ceci est le contenu que vous pouvez afficher ou masquer en utilisant
+            le bouton ci-dessus.
+          </p>
+
+          <h2>Exemple : Gestion d'un Restaurant avec la POO</h2>
+          <p>
+            Dans cet exemple, nous allons modéliser la gestion d'un restaurant
+            en utilisant les concepts de la POO. Nous allons créer des classes
+            pour les différents types de produits alimentaires et de boissons,
+            et utiliser les concepts d'héritage, d'abstraction, d'encapsulation
+            et de polymorphisme pour gérer les commandes.
+          </p>
+
+          <h3>Diagramme de Classes</h3>
+          <p>Voici un schéma simplifié des classes du restaurant :</p>
+          <ul>
+            <li>
+              <strong>Food</strong> (interface) : Définie avec les méthodes
+              <code>getPrice()</code> et <code>getCalories()</code>.
+            </li>
+            <li>
+              <strong>Drink</strong> (classe abstraite) : Implemente
+              <code>Food</code>, possède un attribut <code>aCan</code> et est
+              étendue par les classes <code>Coke</code>,
+              <code>AppleSmoothie</code>.
+            </li>
+            <li>
+              <strong>Bread</strong> et <strong>Sandwich</strong> (classes
+              abstraites) : Implemente <code>Food</code>. <code>Bread</code> est
+              étendue par <code>FrenchBaguette</code>, et
+              <code>Sandwich</code> par <code>HamSandwich</code>.
+            </li>
+            <li>
+              <strong>CustomerOrder</strong> : Gère les commandes en utilisant
+              une liste de produits <code>Food</code>.
+            </li>
+          </ul>
+
+          <h3>Code Java pour l'Exemple du Restaurant</h3>
+          <div class="code-block">
+            interface Food {<br />
+            &nbsp;&nbsp;float getPrice();<br />
+            &nbsp;&nbsp;int getCalories();<br />
+            }<br /><br />
+
+            abstract class Drink implements Food {<br />
+            &nbsp;&nbsp;protected boolean aCan;<br />
+            &nbsp;&nbsp;public boolean isACan() { return aCan; }<br />
+            }<br /><br />
+
+            class Coke extends Drink {<br />
+            &nbsp;&nbsp;private float price = 1.20f;<br />
+            &nbsp;&nbsp;private int calories = 105;<br />
+            &nbsp;&nbsp;public float getPrice() { return price; }<br />
+            &nbsp;&nbsp;public int getCalories() { return calories; }<br />
+            }<br /><br />
+
+            abstract class Bread implements Food {<br />
+            &nbsp;&nbsp;protected float price;<br />
+            }<br /><br />
+
+            class FrenchBaguette extends Bread {<br />
+            &nbsp;&nbsp;private float price = 0.80f;<br />
+            &nbsp;&nbsp;private int calories = 700;<br />
+            &nbsp;&nbsp;public float getPrice() { return price; }<br />
+            &nbsp;&nbsp;public int getCalories() { return calories; }<br />
+            }<br /><br />
+
+            import java.util.ArrayList;<br />
+            import java.util.List;<br /><br />
+
+            class CustomerOrder {<br />
+            &nbsp;&nbsp;private List&lt;Food&gt; orderItems = new
+            ArrayList&lt;&gt;();<br />
+            &nbsp;&nbsp;public void addItem(Food item) { orderItems.add(item);
+            }<br />
+            &nbsp;&nbsp;public float getTotalPrice() {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;float total = 0;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;for (Food item : orderItems) { total +=
+            item.getPrice(); }<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;return total;<br />
+            &nbsp;&nbsp;}<br />
+            }<br /><br />
+
+            public class Main {<br />
+            &nbsp;&nbsp;public static void main(String[] args) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;CustomerOrder order = new
+            CustomerOrder();<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;Food coke = new Coke();<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;Food baguette = new FrenchBaguette();<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;order.addItem(coke);<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;order.addItem(baguette);<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Total Price: " +
+            order.getTotalPrice());<br />
+            &nbsp;&nbsp;}<br />
+            }
+          </div>
+
+          <h3>Résultat Attendu</h3>
+          <div class="code-block">Total Price: 2.0</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
